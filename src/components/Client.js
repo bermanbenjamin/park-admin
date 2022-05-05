@@ -27,6 +27,9 @@ export const ClientList = (props) => (
 );
 
 export const ClientEdit = (props) => (
+  <>
+  <h1>Editar Cliente</h1>
+  
   <Edit>
     <SimpleForm>
       <TextInput source="nome" />
@@ -35,9 +38,15 @@ export const ClientEdit = (props) => (
       <NumberInput source="veiculos" />
     </SimpleForm>
   </Edit>
+  </>
 );
 
 export const ClientCreate = (props) => (
+
+  <>
+  
+  <h1>Criar Cliente</h1>
+  
   <Create {...props}>
     <SimpleForm>
       <TextInput source="nome" />
@@ -48,4 +57,5 @@ export const ClientCreate = (props) => (
       <NumberInput source="veiculos" />
     </SimpleForm>
   </Create>
+  </>
 );
