@@ -21,15 +21,13 @@ const App = () => (
       edit={ParkEdit}
       create={ParkCreate}
     />
-    <Resource name="estacionamento" list={ListGuesser} />
     
     <Resource
-      name="posts"
+      name="postsa"
       list={CarList}
       edit={CarEdit}
       create={CarCreate}
     />
-    <Resource name="veiculo" list={ListGuesser} />
   </Admin>
 );
 
