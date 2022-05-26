@@ -1,34 +1,12 @@
-import jsonServerProvider from "ra-data-json-server";
 import * as React from "react";
-import { Admin, ListGuesser, Resource } from "react-admin";
-import { CarCreate, CarEdit, CarList } from "./components/Car";
-import { ClientCreate, ClientEdit, ClientList } from "./components/Client";
-import { ParkCreate, ParkEdit, ParkList } from "./components/Park";
+import { Routes } from "./routes";
 
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
-
-const App = () => (
-  <Admin dataProvider={dataProvider}>
-    <Resource
-      name="users"
-      list={ClientList}
-      edit={ClientEdit}
-      create={ClientCreate}
-    />
-    <Resource
-      name="posts"
-      list={ParkList}
-      edit={ParkEdit}
-      create={ParkCreate}
-    />
-    
-    <Resource
-      name="postsa"
-      list={CarList}
-      edit={CarEdit}
-      create={CarCreate}
-    />
-  </Admin>
-);
+const App = () => {
+  return (
+    <>
+      <Routes />
+    </>
+  );
+};
 
 export default App;
