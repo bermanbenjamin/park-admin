@@ -104,7 +104,7 @@ function VeiculosContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Veiculos
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">

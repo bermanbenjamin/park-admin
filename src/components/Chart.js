@@ -16,23 +16,28 @@ function createData(time, amount) {
 }
 
 const data = [
-  createData("00:00", 0),
-  createData("03:00", 300),
-  createData("06:00", 600),
-  createData("09:00", 800),
-  createData("12:00", 1500),
-  createData("15:00", 2000),
-  createData("18:00", 2400),
-  createData("21:00", 2400),
-  createData("24:00", undefined),
+  createData("06:00", 0),
+  createData("08:00", 3),
+  createData("10:00", 12),
+  createData("12:00", 15),
+  createData("14:00", 11),
+  createData("16:00", 4),
+  createData("18:00", 3),
+  createData("20:00", 1),
 ];
 
 export default function Chart() {
   const theme = useTheme();
+  var options = {
+    year: "numeric",
+    month: "2-digit",
+    day: "numeric",
+  };
+  const dateToday = new Date().toLocaleString("pt-BR", options);
 
   return (
     <React.Fragment>
-      <Title>Today</Title>
+      <Title>{`Hoje - ${dateToday}`}</Title>
       <ResponsiveContainer>
         <LineChart
           data={data}
@@ -61,7 +66,7 @@ export default function Chart() {
                 ...theme.typography.body1,
               }}
             >
-              Sales ($)
+              Carros
             </Label>
           </YAxis>
           <Line

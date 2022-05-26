@@ -104,7 +104,7 @@ function EstacionamentoContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Estacionamento
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">

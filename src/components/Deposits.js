@@ -1,27 +1,30 @@
 import * as React from "react";
-import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Title from "./Title";
 
-function preventDefault(event) {
-  event.preventDefault();
-}
-
 export default function Deposits() {
+  var options = {
+    weekday: "long",
+    year: "numeric",
+    month: "2-digit",
+    day: "numeric",
+  };
+  const dateToday = new Date().toLocaleString("pt-BR", options);
   return (
     <React.Fragment>
-      <Title>Recent Deposits</Title>
+      <Title>Receita Diária</Title>
       <Typography component="p" variant="h4">
-        $3,024.00
+        R$666,00
       </Typography>
+      <Box
+        sx={{
+          height: 100,
+        }}
+      />
       <Typography color="text.secondary" sx={{ flex: 1 }}>
-        on 15 March, 2019
+        {dateToday.toLocaleUpperCase()}
       </Typography>
-      <div>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          View balance
-        </Link>
-      </div>
     </React.Fragment>
   );
 }
